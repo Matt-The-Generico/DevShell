@@ -5,7 +5,7 @@ Criado para desenvolvedores que querem um terminal mais inteligente, completo e 
 ⚙️ Instalação
 Baixe o repositório:
 
-git clone https://github.com/seu-usuario/DevShell.git
+git clone https://github.com/Matt-The-Generico/DevShell.git
 cd DevShell
 
 Execute o DevShell:
