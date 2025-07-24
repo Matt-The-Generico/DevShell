@@ -1,5 +1,3 @@
-DevShell
-
 DevShell é uma ferramenta de terminal para desenvolvedores, feita em Python, que fornece dezenas de comandos úteis, desde utilidades básicas até ferramentas DevOps, rede, segurança e produtividade.
 
 Criado para desenvolvedores que querem um terminal mais inteligente, completo e ágil.
