@@ -14,7 +14,7 @@ DevShell.py
 🧠 Comandos disponíveis
 Organizados em categorias:
 
-🔹 Utilidades básicas
+🔹 Utilidades básicas:
 uuid – Gera um UUID.
 
 genpass – Gera uma senha aleatória forte.
@@ -33,28 +33,28 @@ color <hex> – Converte HEX ↔ RGB.
 
 qrgen <txt> – Gera QR code.
 
-🧩 Arquivos e sistema
+🧩 Arquivos e sistema:
 ls, cd, mkdir, touch, read, search, open
 
-⚙️ Git Helpers
+⚙️ Git Helpers:
 gitstatus, gitbranch, gitlog, gitreset, gpush
 
-🌐 Rede e API
+🌐 Rede e API:
 ip, ping, httpget, headers, portscan
 
-🧪 JSON, Regex, Codificação
+🧪 JSON, Regex, Codificação:
 jsonfmt, jsonval, regex, minify, diff
 
-🔐 Segurança
+🔐 Segurança:
 hash, comparehash, securedel
 
-🚀 DevOps e Servidores
+🚀 DevOps e Servidores:
 serve, portscan, dockerps, dockerstart, ssh
 
-🛠️ Produtividade do Dev
+🛠️ Produtividade do Dev:
 todo, addtodo, deltodo
 
-❗Avisos
+❗Avisos:
 Alguns comandos exigem Docker instalado, acesso à internet ou permissões administrativas.
 
 O DevShell é uma ferramenta local e não coleta nenhum dado do usuário.
