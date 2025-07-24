@@ -1,8 +1,11 @@
+# DevShell
+
 DevShell é uma ferramenta de terminal para desenvolvedores, feita em Python, que fornece dezenas de comandos úteis, desde utilidades básicas até ferramentas DevOps, rede, segurança e produtividade.
 
 Criado para desenvolvedores que querem um terminal mais inteligente, completo e ágil.
 
 ⚙️ Instalação:
+
 Baixe o repositório:
 
 git clone https://github.com/Matt-The-Generico/DevShell.git
@@ -10,9 +13,11 @@ git clone https://github.com/Matt-The-Generico/DevShell.git
 cd DevShell
 
 Execute o DevShell:
+
 DevShell.py
 
 🧠 Comandos disponíveis:
+
 Organizados em categorias:
 
 🔹 Utilidades básicas:
@@ -35,27 +40,35 @@ color <hex> – Converte HEX ↔ RGB.
 qrgen <txt> – Gera QR code.
 
 🧩 Arquivos e sistema:
+
 ls, cd, mkdir, touch, read, search, open
 
 ⚙️ Git Helpers:
+
 gitstatus, gitbranch, gitlog, gitreset, gpush
 
 🌐 Rede e API:
+
 ip, ping, httpget, headers, portscan
 
 🧪 JSON, Regex, Codificação:
+
 jsonfmt, jsonval, regex, minify, diff
 
 🔐 Segurança:
+
 hash, comparehash, securedel
 
 🚀 DevOps e Servidores:
+
 serve, portscan, dockerps, dockerstart, ssh
 
 🛠️ Produtividade do Dev:
+
 todo, addtodo, deltodo
 
 ❗Avisos:
+
 Alguns comandos exigem Docker instalado, acesso à internet ou permissões administrativas.
 
 O DevShell é uma ferramenta local e não coleta nenhum dado do usuário.
@@ -96,6 +109,8 @@ ou outros negócios no Software.
 6. O uso desta ferramenta implica na **aceitação total destes termos**.
 
 
-📧 Contato
+📧 Contato:
+
 Tem sugestões, bugs ou ideias novas de comando?
+
 Entre em contato: genericgamesgg@gmail.com ou abra uma Issue no GitHub!
