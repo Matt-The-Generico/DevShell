@@ -18,6 +18,10 @@ No CMD, digite
 
 cd C:\Users\seu-nome-de-usuário\local-da-pasta-do-seu-projeto\nome-da-pasta-do-seu-projeto
 
+Instale dependências:
+
+pip install requests
+
 Execute o DevShell:
 
 DevShell.py
