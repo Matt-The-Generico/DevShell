@@ -2,16 +2,17 @@ DevShell é uma ferramenta de terminal para desenvolvedores, feita em Python, qu
 
 Criado para desenvolvedores que querem um terminal mais inteligente, completo e ágil.
 
-⚙️ Instalação
+⚙️ Instalação:
 Baixe o repositório:
 
 git clone https://github.com/Matt-The-Generico/DevShell.git
+
 cd DevShell
 
 Execute o DevShell:
 DevShell.py
 
-🧠 Comandos disponíveis
+🧠 Comandos disponíveis:
 Organizados em categorias:
 
 🔹 Utilidades básicas:
