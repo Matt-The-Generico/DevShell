@@ -31,23 +31,7 @@ Execute o DevShell:
 Organizados em categorias:
 
 🔹 Utilidades básicas:
-uuid – Gera um UUID.
-
-genpass – Gera uma senha aleatória forte.
-
-timestamp – Mostra o timestamp atual.
-
-dateconv <ts> – Converte timestamp para data.
-
-base64enc <txt> – Codifica em Base64.
-
-base64dec <txt> – Decodifica Base64.
-
-calc – Calculadora com expressões.
-
-color <hex> – Converte HEX ↔ RGB.
-
-qrgen <txt> – Gera QR code.
+uuid, genpass, timestamp, dateconv, base64enc, base64dec, calc, color, qrgen
 
 🧩 Arquivos e sistema:
 
