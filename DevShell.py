@@ -23,65 +23,67 @@ TODO_FILE = "todo.md"
 
 # Utilidades Básicas
 def help():
-    cores = [
-        "\033[91m",  # vermelho
-        "\033[92m",  # verde
-        "\033[93m",  # amarelo
-        "\033[94m",  # azul
-        "\033[95m",  # magenta
-        "\033[96m",  # ciano
-    ]
-    reset = "\033[0m"
+    # Garante que o colorama esteja disponível
+    try:
+        from colorama import init, Fore, Style
+    except ImportError:
+        import subprocess
+        import sys
+        print("[Aviso] O módulo 'colorama' é indispensável para esta ação e não foi encontrado. Instalando...")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "colorama"])
+        from colorama import init, Fore, Style  # tenta importar de novo
+
+    init(autoreset=True)
 
     comandos = [
-        "uuid: Gera um UUID",
-        "genpass: Gera uma senha forte aleatória",
-        "timestamp: Mostra o timestamp atual (epoch e formato legível)",
-        "dateconv <ts>: Converte timestamp para data legível",
-        "base64enc <txt>: Codifica texto em Base64",
-        "base64dec <txt>: Decodifica texto em Base64",
-        "calc: Calculadora de terminal (suporta expressões)",
-        "color <hex>: Mostra cor RGB a partir de hex e vice-versa",
-        "qrgen <txt>: Gera um QR code a partir de texto/url",
-        "ls: Lista arquivos da pasta atual",
-        "cd <dir>: Muda de diretório",
-        "mkdir <nome>: Cria uma nova pasta",
-        "open <arquivo>: Abre arquivo no editor padrão",
-        "search <termo>: Busca por arquivos com o nome que contenha <termo>",
-        "read <arquivo>: Lê o conteúdo de um arquivo no terminal",
-        "touch <nome>: Cria um novo arquivo vazio",
-        "gitstatus: Mostra status atual do repositório Git",
-        "gitbranch: Lista branches",
-        "gitlog: Mostra últimos 5 commits",
-        "gitreset: Reset hard para o último commit (requer confirmação)",
-        "gpush: Atalho para git add . && git commit -m \"\" && git push",
-        "ip: Mostra IP local e público",
-        "ping <site>: Faz ping e mede latência",
-        "httpget <url>: Requisição GET e exibe JSON formatado",
-        "headers <url>: Exibe cabeçalhos HTTP da URL",
-        "speedtest: Testa velocidade de download e upload da sua rede Wi-Fi",
-        "jsonfmt <arquivo>: Formata arquivo JSON",
-        "jsonval <arquivo>: Valida sintaxe JSON",
-        "regex <texto> <exp>: Testa expressão regular",
-        "minify <arquivo>: Minifica HTML, CSS ou JS",
-        "diff <arq1> <arq2>: Mostra diferenças entre dois arquivos",
-        "hash <texto>: Gera hash SHA256",
-        "comparehash <t1> <t2>: Compara dois hashes",
-        "securedel <arq>: Deleta um arquivo com sobrescrita segura",
-        "serve: Sobe um servidor HTTP simples na pasta atual (requer confirmação)",
-        "portscan <ip>: Escaneia portas abertas em um IP",
-        "dockerps: Lista containers Docker em execução",
-        "dockerstart <id>: Inicia container Docker",
-        "ssh <host>: Acessa um servidor via SSH",
-        "todo: Lista tarefas do dev (em arquivo markdown)",
-        "addtodo '<tarefa>': Adiciona uma tarefa",
-        "deltodo <id>: Remove tarefa específica",
-        "exit: Fecha a janela do DevShell"
+        (Fore.RED, "uuid: Gera um UUID"),
+        (Fore.GREEN, "genpass: Gera uma senha forte aleatória"),
+        (Fore.YELLOW, "timestamp: Mostra o timestamp atual (epoch e formato legível)"),
+        (Fore.BLUE, "dateconv <ts>: Converte timestamp para data legível"),
+        (Fore.MAGENTA, "base64enc <txt>: Codifica texto em Base64"),
+        (Fore.CYAN, "base64dec <txt>: Decodifica texto em Base64"),
+        (Fore.RED, "calc: Calculadora de terminal (suporta expressões)"),
+        (Fore.GREEN, "color <hex>: Mostra cor RGB a partir de hex e vice-versa"),
+        (Fore.YELLOW, "qrgen <txt>: Gera um QR code a partir de texto/url"),
+        (Fore.BLUE, "ls: Lista arquivos da pasta atual"),
+        (Fore.MAGENTA, "cd <dir>: Muda de diretório"),
+        (Fore.CYAN, "mkdir <nome>: Cria uma nova pasta"),
+        (Fore.RED, "open <arquivo>: Abre arquivo no editor padrão"),
+        (Fore.GREEN, "search <termo>: Busca por arquivos com o nome que contenha <termo>"),
+        (Fore.YELLOW, "read <arquivo>: Lê o conteúdo de um arquivo no terminal"),
+        (Fore.BLUE, "touch <nome>: Cria um novo arquivo vazio"),
+        (Fore.MAGENTA, "gitstatus: Mostra status atual do repositório Git"),
+        (Fore.CYAN, "gitbranch: Lista branches"),
+        (Fore.RED, "gitlog: Mostra últimos 5 commits"),
+        (Fore.GREEN, "gitreset: Reset hard para o último commit (requer confirmação)"),
+        (Fore.YELLOW, 'gpush: Atalho para git add . && git commit -m "" && git push'),
+        (Fore.BLUE, "ip: Mostra IP local e público"),
+        (Fore.MAGENTA, "ping <site>: Faz ping e mede latência"),
+        (Fore.CYAN, "httpget <url>: Requisição GET e exibe JSON formatado"),
+        (Fore.RED, "headers <url>: Exibe cabeçalhos HTTP da URL"),
+        (Fore.GREEN, "speedtest: Testa velocidade de download e upload da sua rede Wi-Fi"),
+        (Fore.YELLOW, "jsonfmt <arquivo>: Formata arquivo JSON"),
+        (Fore.BLUE, "jsonval <arquivo>: Valida sintaxe JSON"),
+        (Fore.MAGENTA, "regex <texto> <exp>: Testa expressão regular"),
+        (Fore.CYAN, "minify <arquivo>: Minifica HTML, CSS ou JS"),
+        (Fore.RED, "diff <arq1> <arq2>: Mostra diferenças entre dois arquivos"),
+        (Fore.GREEN, "hash <texto>: Gera hash SHA256"),
+        (Fore.YELLOW, "comparehash <t1> <t2>: Compara dois hashes"),
+        (Fore.BLUE, "securedel <arq>: Deleta um arquivo com sobrescrita segura"),
+        (Fore.MAGENTA, "serve: Sobe um servidor HTTP simples na pasta atual (requer confirmação)"),
+        (Fore.CYAN, "portscan <ip>: Escaneia portas abertas em um IP"),
+        (Fore.RED, "dockerps: Lista containers Docker em execução"),
+        (Fore.GREEN, "dockerstart <id>: Inicia container Docker"),
+        (Fore.YELLOW, "ssh <host>: Acessa um servidor via SSH"),
+        (Fore.BLUE, "todo: Lista tarefas do dev (em arquivo markdown)"),
+        (Fore.MAGENTA, "addtodo '<tarefa>': Adiciona uma tarefa"),
+        (Fore.CYAN, "deltodo <id>: Remove tarefa específica"),
+        (Fore.RED, "exit: Fecha a janela do DevShell"),
+        (Fore.GREEN, "help: imprime este output"),
     ]
 
-    for i, cmd in enumerate(comandos):
-        cor = cores[i % len(cores)]
-        print(f"{cor}{cmd}{reset}")
+    for cor, texto in comandos:
+        print(cor + texto + Style.RESET_ALL)
 
 def generate_uuid():
     print(uuid.uuid4())
@@ -352,6 +354,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
