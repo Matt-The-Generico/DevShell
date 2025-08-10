@@ -1,6 +1,7 @@
 # COMANDOS DO DEVSHELL #
 ### 1. Utilidades básicas
 Comando	| Função
+help  Mostra todos os comandos do DevShell
 uuid	Gera um UUID
 genpass	Gera uma senha forte aleatória
 timestamp	Mostra o timestamp atual (epoch e formato legível)
