@@ -31,7 +31,7 @@ Execute o DevShell:
 Organizados em categorias:
 
 🔹 Utilidades básicas:
-uuid, genpass, timestamp, dateconv, base64enc, base64dec, calc, color, qrgen
+help, uuid, genpass, timestamp, dateconv, base64enc, base64dec, calc, color, qrgen
 
 🧩 Arquivos e sistema:
 
