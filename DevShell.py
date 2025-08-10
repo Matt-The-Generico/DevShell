@@ -22,6 +22,52 @@ except ImportError:
 TODO_FILE = "todo.md"
 
 # Utilidades Básicas
+
+def help():
+    print("uuid: Gera um UUID")
+    print("genpass: Gera uma senha forte aleatória")
+    print("timestamp: Mostra o timestamp atual (epoch e formato legível)")
+    print("dateconv <ts>: Converte timestamp para data legível")
+    print("base64enc <txt>: Codifica texto em Base64")
+    print("base64dec <txt>: Decodifica texto em Base64")
+    print("calc: Calculadora de terminal (suporta expressões)")
+    print("color <hex>: Mostra cor RGB a partir de hex e vice-versa")
+    print("qrgen <txt>: Gera um QR code a partir de texto/url")
+    print("ls: Lista arquivos da pasta atual")
+    print("cd <dir>: Muda de diretório")
+    print("mkdir <nome>: Cria uma nova pasta")
+    print("open <arquivo>: Abre arquivo no editor padrão")
+    print("search <termo>: Busca por arquivos com o nome que contenha <termo>")
+    print("read <arquivo>: Lê o conteúdo de um arquivo no terminal")
+    print("touch <nome>: Cria um novo arquivo vazio")
+    print("gitstatus: Mostra status atual do repositório Git")
+    print("gitbranch: Lista branches")
+    print("gitlog: Mostra últimos 5 commits")
+    print("gitreset: Reset hard para o último commit (requer confirmação)")
+    print("gpush: Atalho para git add . && git commit -m "" && git push")
+    print("ip: Mostra IP local e público")
+    print("ping <site>: Faz ping e mede latência")
+    print("httpget <url>: Requisição GET e exibe JSON formatado")
+    print("headers <url>: Exibe cabeçalhos HTTP da URL")
+    print("speedtest: Testa velocidade de download e upload da sua rede Wi-Fi")
+    print("jsonfmt <arquivo>: Formata arquivo JSON")
+    print("jsonval <arquivo>: Valida sintaxe JSON")
+    print("regex <texto> <exp>: Testa expressão regular")
+    print("minify <arquivo>: Minifica HTML, CSS ou JS")
+    print("diff <arq1> <arq2>: Mostra diferenças entre dois arquivos")
+    print("hash <texto>: Gera hash SHA256")
+    print("comparehash <t1> <t2>: Compara dois hashes")
+    print("securedel <arq>: Deleta um arquivo com sobrescrita segura")
+    print("serve: Sobe um servidor HTTP simples na pasta atual (requer confirmação)")
+    print("portscan <ip>: Escaneia portas abertas em um IP")
+    print("dockerps: Lista containers Docker em execução")
+    print("dockerstart <id>: Inicia container Docker")
+    print("ssh <host>: Acessa um servidor via SSH")
+    print("todo    Lista tarefas do dev (em arquivo markdown)")
+    print("addtodo "<tarefa>"      Adiciona uma tarefa")
+    print("deltodo <id>: Remove tarefa específica")
+    print("exit: Fecha a janela do DevShell")
+
 def generate_uuid():
     print(uuid.uuid4())
 
@@ -187,7 +233,7 @@ def securedel(file):
 # DevOps e servidores
 def serve():
     print("ATENÇÃO: APÓS A CONFIRMAÇÃO, O SERVIÇO NA PORTA 8000 SERÁ INFINITO")
-    print("(CONTANTO QUE NÃO FORCE UMA PARADA). DESEJA REALMENTE CONTINUAR?")
+    print("(A MENOS QUE FORCE UMA PARADA). DESEJA REALMENTE CONTINUAR?")
     confirm = input("Digite s/n: ")
     if confirm.lower() == 's':
         HTTPServer(('0.0.0.0', 8000), SimpleHTTPRequestHandler).serve_forever()
@@ -225,6 +271,7 @@ def del_todo(index):
 
 # Dispatcher
 COMMANDS = {
+    "help": help
     "uuid": generate_uuid,
     "genpass": generate_password,
     "timestamp": current_timestamp,
@@ -290,5 +337,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
