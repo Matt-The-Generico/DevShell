@@ -120,7 +120,26 @@ def headers(url):
     print(dict(r.headers))
 
 def speedtest():
-    os.system("speedtest")  # Requer speedtest-cli instalado
+    try:
+        # tenta rodar o binário externo
+        exit_code = os.system("speedtest --secure")
+        if exit_code != 0:
+            raise RuntimeError("Comando externo falhou")
+    except Exception:
+        print("[Aviso] O comando externo 'speedtest' falhou ou não está disponível.")
+        print("Executando teste de velocidade via biblioteca Python integrada...")
+        try:
+            import speedtest as st
+        except ImportError:
+            os.system('pip install speedtest-cli')
+            import speedtest as st
+        
+        s = st.Speedtest()
+        s.get_best_server()
+        print(f"Ping: {s.results.ping} ms")
+        print(f"Download: {s.download()/1_000_000:.2f} Mbps")
+        print(f"Upload: {s.upload()/1_000_000:.2f} Mbps")
+
 
 # Codificação, JSON, Regex
 def jsonfmt(file):
@@ -265,3 +284,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
