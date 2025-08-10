@@ -35,6 +35,7 @@ ip	Mostra IP local e público
 ping <site>	Faz ping e mede latência
 httpget <url>	Requisição GET e exibe JSON formatado
 headers <url>	Exibe cabeçalhos HTTP da URL
+speedtest Faz teste de download e upload da sua rede Wi-Fi
 
 ### 5. Codificação, JSON, Regex
 Comando |	Função
