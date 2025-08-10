@@ -186,7 +186,13 @@ def securedel(file):
 
 # DevOps e servidores
 def serve():
-    HTTPServer(('0.0.0.0', 8000), SimpleHTTPRequestHandler).serve_forever()
+    print("ATENÇÃO: APÓS A CONFIRMAÇÃO, O SERVIÇO NA PORTA 8000 SERÁ INFINITO")
+    print("(CONTANTO QUE NÃO FORCE UMA PARADA). DESEJA REALMENTE CONTINUAR?")
+    confirm = input("Digite s/n: ")
+    if confirm.lower() == 's':
+        HTTPServer(('0.0.0.0', 8000), SimpleHTTPRequestHandler).serve_forever()
+    else:
+        print("Serviço cancelado.")
 
 def portscan(ip):
     for port in range(1, 1025):
@@ -284,4 +290,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
