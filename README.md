@@ -59,7 +59,7 @@ gitstatus, gitbranch, gitlog, gitreset, gpush
 
 🌐 Rede e API:
 
-ip, ping, httpget, headers, portscan
+ip, ping, httpget, headers, portscan, speedtest
 
 🧪 JSON, Regex, Codificação:
 
