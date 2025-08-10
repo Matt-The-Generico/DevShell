@@ -8,7 +8,7 @@ Criado para desenvolvedores que querem um terminal mais inteligente, completo e 
 
 Baixe o repositório utilizando Git:
 
-git clone https://github.com/Matt-The-Generico/DevShell.git
+`git clone https://github.com/Matt-The-Generico/DevShell.git`
 
 A pasta do projeto estará em C:\Users\seu-nome-de-usuário
 
@@ -16,15 +16,15 @@ Mova-a para onde você quiser utilizar o DevShell.
 
 No CMD, digite
 
-cd C:\Users\seu-nome-de-usuário\local-da-pasta-do-seu-projeto\nome-da-pasta-do-seu-projeto
+`cd C:\Users\seu-nome-de-usuário\local-da-pasta-do-seu-projeto\nome-da-pasta-do-seu-projeto`
 
 Instale dependências:
 
-pip install requests
+`pip install requests`
 
 Execute o DevShell:
 
-DevShell.py
+`DevShell.py`
 
 🧠 Comandos disponíveis:
 
