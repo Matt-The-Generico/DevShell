@@ -22,8 +22,6 @@ except ImportError:
 TODO_FILE = "todo.md"
 
 # Utilidades Básicas
-
-def help():
 def help():
     cores = [
         "\033[91m",  # vermelho
@@ -354,6 +352,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
