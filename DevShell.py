@@ -271,7 +271,7 @@ def del_todo(index):
 
 # Dispatcher
 COMMANDS = {
-    "help": help
+    "help": help,
     "uuid": generate_uuid,
     "genpass": generate_password,
     "timestamp": current_timestamp,
@@ -337,6 +337,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
