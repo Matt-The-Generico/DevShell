@@ -63,8 +63,8 @@ def help():
     print("dockerps: Lista containers Docker em execução")
     print("dockerstart <id>: Inicia container Docker")
     print("ssh <host>: Acessa um servidor via SSH")
-    print("todo    Lista tarefas do dev (em arquivo markdown)")
-    print("addtodo "<tarefa>"      Adiciona uma tarefa")
+    print("todo: Lista tarefas do dev (em arquivo markdown)")
+    print("addtodo '<tarefa>': Adiciona uma tarefa")
     print("deltodo <id>: Remove tarefa específica")
     print("exit: Fecha a janela do DevShell")
 
@@ -337,6 +337,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
