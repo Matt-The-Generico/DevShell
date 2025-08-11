@@ -62,7 +62,7 @@ def help():
         (Fore.RED, "securedel <arq>: Deleta um arquivo com sobrescrita segura"),
         (Fore.MAGENTA, "gitstatus: Mostra status atual do repositório Git"),
         (Fore.MAGENTA, "gitbranch: Lista branches"),
-        (Fore.MAGENTA, "gitlog: Mostra últimos 5 commits"),
+        (Fore.MAGENTA, "gitlog: Mostra últimos N commits (número escolhido pelo usuário)"),
         (Fore.RED, "gitreset: Reset hard para o último commit (requer confirmação)"),
         (Fore.MAGENTA, "gpush: Atalho para git add . && git commit -m \"\" && git push"),
         (Fore.MAGENTA, "dockerps: Lista containers Docker em execução"),
@@ -360,6 +360,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
