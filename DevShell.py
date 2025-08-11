@@ -157,9 +157,13 @@ def touch(name):
 # Git helpers
 def git_status(): os.system("git status")
 def git_branch(): os.system("git branch")
-def git_log():
-    os.system("git log -5")
-    print("Tecle Q para voltar ao DevShell. Tecle H para ver todos os comandos.")
+def git_log(n=5):
+    try:
+        n = int(n)
+    except:
+        n = 5
+    os.system(f"git log -{n}")
+
 def git_reset():
     confirm = input("Tem certeza? (s/n): ")
     if confirm.lower() == 's':
@@ -309,7 +313,7 @@ COMMANDS = {
     "touch": lambda arg: touch(arg),
     "gitstatus": git_status,
     "gitbranch": git_branch,
-    "gitlog": git_log,
+    "gitlog": lambda *args: git_log(args[0] if args else 5),
     "gitreset": git_reset,
     "gpush": gpush,
     "ip": ip,
