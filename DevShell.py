@@ -78,7 +78,7 @@ def help():
         (Fore.WHITE, "todo: Lista tarefas do dev (em arquivo markdown)"),
         (Fore.WHITE, "addtodo '<tarefa>': Adiciona uma tarefa"),
         (Fore.WHITE, "deltodo <id>: Remove tarefa específica"),
-        (Fore.RED, "exit: Fecha a janela do DevShell")
+        (Fore.RED, "exit: Fecha a janela do DevShell"),
         (Fore.WHITE, "help: imprime este output")
     ]
 
@@ -354,6 +354,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
