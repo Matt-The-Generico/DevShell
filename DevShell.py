@@ -158,6 +158,7 @@ def touch(name):
 def git_status(): os.system("git status")
 def git_branch(): os.system("git branch")
 def git_log(): os.system("git log -5")
+    print("Tecle Q para voltar ao DevShell. Tecle H para ver todos os comandos.")
 def git_reset():
     confirm = input("Tem certeza? (s/n): ")
     if confirm.lower() == 's':
@@ -354,6 +355,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
